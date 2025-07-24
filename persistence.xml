@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             version="2.1">
+             
+       <persistence-unit name="ghostPU">
+    
+        <class>com.ghost.model.GhostNet</class>
+        <class>com.ghost.model.ReportingPerson</class>
+        <class>com.ghost.model.SalvagingPerson</class>
+        
+       <properties>
+           
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/ghostnetdb?serverTimezone=UTC"/>
+            
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+
+            <property name="hibernate.persistence.provider" value="org.hibernate.jpa.HibernatePersistenceProvider"/>
+            
+            <property name="javax.persistence.schema-generation.database.action" value="update"/>
+              <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
