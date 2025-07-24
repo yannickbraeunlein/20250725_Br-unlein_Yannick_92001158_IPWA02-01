@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 600px; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.form-field {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-field input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+}
+
+.form-field p:commandButton {
+    background-color: #008366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-field p:commandButton:hover {
+    background-color: #008366;
+}
+
+.ui-selectbooleancheckbox .ui-chkbox-label {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+input:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .form-container {
+        width: 90%;
+    }
+}
+
+
+
+.container
+{
+	width:100%;
+	display:flex;
+}
+
+.left-section, .right-section
+{
+	width:50%;
+	padding:10px;
+	box-sizing:border-box;
+}
+
+
+.left-section
+{
+	background-color: #f0f0f0;
+}
+.right-section
+{
+	background-color: #d0e0f0;
+}
