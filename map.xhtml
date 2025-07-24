@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <title>Map Viewer</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrOlSp7vnGivLaelou-9Ha7s-FVsGWUos" async="true" defer="true"></script>
+    <script type="text/javascript">
+        function initMap() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lat = parseFloat(urlParams.get('lat'));
+            const lng = parseFloat(urlParams.get('lng'));
+
+            if (!isNaN(lat) &amp;&amp; !isNaN(lng)) {
+
+                const location = { lat: lat, lng: lng };
+                const map = new google.maps.Map(document.getElementById('map'), {
+                    center: location,
+                    zoom: 15
+                });
+
+                new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    title: "Selected Location"
+                });
+            } else {
+                document.getElementById('map').innerHTML = "Invalid or missing coordinates.";
+            }
+        }
+
+        window.onload = initMap;
+    </script>
+    <style>
+        #map {
+            width: 100%;
+            height: 500px;
+            margin-top: 20px;
+        }
+    </style>
+</h:head>
+
+<h:body>
+    <h2>Location on Map</h2>
+    <div id="map"></div>
+</h:body>
+</html>
